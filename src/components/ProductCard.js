@@ -34,11 +34,11 @@ const ProductCard = ({ product }) => {
           Add
         </button>)}
       {  pathname.includes("cart") && (    <button
-          className='bg-red-500 flex justify-center items-center rounded-full py-1 px-2 flex-1 text-white text-bold'
+          className='bg-red-500 flex justify-between px-2 items-center rounded-full py-1 flex-1 text-white text-bold'
            onClick={() => dispatch(removeFromCart(product))}
         >
-          remove
-          <RiDeleteBin7Fill/>
+          <p className="text-lg">remove</p>
+          <RiDeleteBin7Fill size={20}/>
         </button>)}
       { !pathname.includes("cart") && (  <button
           title='Add to wishlist'
